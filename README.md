@@ -1,12 +1,8 @@
 # Business as Rulesual: A Benchmark and Framework for Business Rule Flow Modeling with LLMs
 
-[![ACL 2026](https://img.shields.io/badge/ACL-2026-red.svg)](https://acl2026.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Dataset](https://img.shields.io/badge/Dataset-BREX-blue.svg)](#dataset)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Dataset: BREX](https://img.shields.io/badge/Dataset-BREX-blue.svg)](dataset/BREX.jsonl)
 
-**[Paper]** | **[Dataset]** | **[Project Page]**
-
-> **Note:** This repository contains the code and dataset for the paper "Business as Rulesual: A Benchmark and Framework for Business Rule Flow Modeling with LLMs", submitted to ACL 2026.
 
 ## 📖 Abstract
 
@@ -25,9 +21,9 @@ Our experiments across 13 state-of-the-art LLMs reveal that executable grounding
 * **Structured Annotation:** Rules are annotated as `(Condition, Action)` pairs with explicit **Sequential**, **Conditional**, and **Parallel** dependencies.
 * **ExIde Framework:** A decompose-and-reason strategy leveraging intermediate executable representations.
 
-## 📂 Dataset: BREX
+## 📂 Dataset: [BREX](dataset/BREX.jsonl)
 
-The BREX dataset focuses on **Business Rule Flow Modeling**. Unlike previous datasets, it explicitly annotates the logic that governs *when* actions occur.
+The [BREX](dataset/BREX.jsonl) dataset focuses on **Business Rule Flow Modeling**. Unlike previous datasets, it explicitly annotates the logic that governs *when* actions occur.
 
 | Metric | Count |
 | :--- | :--- |
@@ -38,8 +34,15 @@ The BREX dataset focuses on **Business Rule Flow Modeling**. Unlike previous dat
 | **Inter-Annotator Agreement** | Kappa: 0.911 (Excellent) |
 
 ### Data Format
-The data is stored in JSON format. Each entry contains the raw text, atomic rules, and the dependency graph.
-*(You can add a snippet of your JSON schema here)*
+The dataset is provided in `.jsonl` format, where each line represents a distinct business scenario.
+
+| Field (Original) | Field (English) | Description |
+| :--- | :--- | :--- |
+| `领域` | Domain | The vertical domain of the business process (e.g., Healthcare, Finance). |
+| `意图` | Intent | The specific business intent or scenario (e.g., "Medical Checkup Appointment"). |
+| `文本` | Text | The unstructured raw business document. |
+| `业务规则二元组` | Rule Pairs | Atomic business rules formatted as `<Condition, Action>`. |
+| `依赖关系` | Dependencies | Logical dependencies between rules (Sequential, Conditional, Parallel). |
 
 ## 🚀 Methodology: ExIde Framework
 
