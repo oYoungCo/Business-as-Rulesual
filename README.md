@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Dataset: BREX](https://img.shields.io/badge/Dataset-BREX-blue.svg)](dataset/BREX.jsonl)
-
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-BREX-ffd21e)](https://huggingface.co/datasets/XiaopiYu/BREX/)
 
 ## 📖 Abstract
 
