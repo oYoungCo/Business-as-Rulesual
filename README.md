@@ -62,13 +62,43 @@ We treat dependency identification as a pairwise classification problem to ident
 
 ## 🛠️ Quick Start
 
-### Requirements
+### Usage
 
 ```bash
 conda create -n brex python=3.10
 conda activate brex
 pip install -r requirements.txt
 ```
+### 2. Configuration
+To run the LLM-based extraction, you need to configure your API key. We use a .env file to manage sensitive credentials securely.
+
+Create a `.env` file in the root directory.
+
+Add your API Key (e.g., Alibaba DashScope/DeepSeek) as follows:
+
+```
+DASHSCOPE_API_KEY=sk-your_api_key_here
+```
+### 3. Running the Extraction
+#### Step 1: Business Rule Extraction
+This script reads the raw business documents (prompts) and extracts atomic business rules (Conditions & Actions).
+
+**Input**： `./business_rules.xlsx`
+
+```bash
+python business_rules_extraction.py
+```
+**Output**: Generates a `business_rules_results.xlsx` containing the extracted rule pairs.
+
+#### Step 2: Dependency Identification
+This script analyzes the extracted rules to identify logical relationships (Sequential, Conditional, Parallel).
+
+**Input**：`./results.xlsx`
+
+```bash
+python dependency_extraction.py
+```
+**Output**: Generates a `dependency_results.xlsx`.
 
 
 ## 📝 Citation
