@@ -73,9 +73,9 @@ pip install -r requirements.txt
 If you find this work helpful, please cite our paper:
 
 ```bibtex
-@inproceedings{acl2026_brex,
-  title={Business as Rulesual: A Benchmark and Framework for Business Rule Flow Modeling with LLMs},
-  author={Yang Chen and },
-  booktitle={Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026)},
+@article{yang2025business,
+  title={Business as Rulesual: A Benchmark and Framework for Business Rule Flow Modeling with LLMs.},
+  author={Yang, Chen and Xu, Ruping and Li, Ruizhe and Cao, Bin and Fan, Jing},
+  journal={CoRR},
   year={2026}
 }
