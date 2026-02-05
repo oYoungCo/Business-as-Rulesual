@@ -6,7 +6,7 @@ from openpyxl import Workbook, load_workbook
 from openai import OpenAI
 from tqdm import tqdm
 from datetime import datetime
-from dotenv import load_dotenv  # 需要 pip install python-dotenv
+from dotenv import load_dotenv 
 
 # ================= Configuration =================
 # Load environment variables from the .env file
